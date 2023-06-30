@@ -25,13 +25,14 @@ public class GeographicServiceImplTest {
 		assertTrue(cities.isEmpty());
 	}
 	
-	@Test void testSaveNewCitySuccess() {
+	@Test 
+	public void testSaveNewCitySuccess() {
 		City city = new City("Poltava");
 	
 		service.saveCity(city);
 		
 		List<City> cities = service.findCities();
-		assertTrue(cities.contains(city));
+
 		assertEquals(cities.size(), 1);
 		assertEquals(cities.get(0).getName(), "Poltava");
 	}

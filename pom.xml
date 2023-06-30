@@ -12,7 +12,7 @@
   </modules>
   
   <properties>
-	<jersye.version>2.19</jersye.version>  
+	<jersye.version>2.40</jersye.version>  
   </properties>
   
     <build>

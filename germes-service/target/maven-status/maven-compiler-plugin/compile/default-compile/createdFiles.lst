@@ -1,2 +1,4 @@
 org\itsimulator\germes\app\rest\service\CityResource.class
+org\itsimulator\germes\app\service\GeographicService.class
 org\itsimulator\germes\app\rest\service\config\JerseyConfig.class
+org\itsimulator\germes\app\service\impl\GeographicServiceImpl.class
