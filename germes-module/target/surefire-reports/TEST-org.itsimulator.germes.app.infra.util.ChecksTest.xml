@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
-    <property name="sun.java.command" value="C:\Users\123\AppData\Local\Temp\surefire3599163188276752468\surefirebooter-20230630194325527_3.jar C:\Users\123\AppData\Local\Temp\surefire3599163188276752468 2023-06-30T19-43-25_339-jvmRun1 surefire-20230630194325527_1tmp surefire_0-20230630194325527_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\123\AppData\Local\Temp\surefire8137114583782011574\surefirebooter-20230702105959904_3.jar C:\Users\123\AppData\Local\Temp\surefire8137114583782011574 2023-07-02T10-59-59_720-jvmRun1 surefire-20230702105959904_1tmp surefire_0-20230702105959904_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\target\test-classes;C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\target\classes;C:\Users\123\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\123\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\123\.m2\repository\com\google\guava\guava\32.0.1-jre\guava-32.0.1-jre.jar;C:\Users\123\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\123\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\123\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\123\.m2\repository\org\checkerframework\checker-qual\3.33.0\checker-qual-3.33.0.jar;C:\Users\123\.m2\repository\com\google\errorprone\error_prone_annotations\2.18.0\error_prone_annotations-2.18.0.jar;C:\Users\123\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\123\AppData\Local\Temp\surefire3599163188276752468\surefirebooter-20230630194325527_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\123\AppData\Local\Temp\surefire8137114583782011574\surefirebooter-20230702105959904_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="19.0.2+7-44"/>
@@ -58,6 +58,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="testCheckParameterNoException" classname="org.itsimulator.germes.app.infra.util.ChecksTest" time="0.007"/>
+  <testcase name="testCheckParameterNoException" classname="org.itsimulator.germes.app.infra.util.ChecksTest" time="0.006"/>
   <testcase name="testCheckParameterGetException" classname="org.itsimulator.germes.app.infra.util.ChecksTest" time="0.0"/>
 </testsuite>

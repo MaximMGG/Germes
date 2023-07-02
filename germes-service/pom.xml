@@ -16,8 +16,8 @@
 			<dependency>
 				<groupId>org.glassfish.jersey</groupId>
 				<artifactId>jersey-bom</artifactId>
-				<version>${jersey.varsion}</version>
-				<type>jar</type>
+				<version>3.1.2</version>
+				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
@@ -30,30 +30,24 @@
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-grizzly2-http</artifactId>
-			<version>${jersye.version}</version>
-			<scope>test</scope>
-		</dependency>
+			<artifactId>jersey-container-servlet-core</artifactId>
+			</dependency>
 		<dependency>
-			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-servlet</artifactId>
-			<version>${jersye.version}</version>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
-			<artifactId>jersey-media-json-jackson</artifactId>
-			<version>${jersye.version}</version>
+			<artifactId>jersey-media-json-binding</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.test-framework</groupId>
 			<artifactId>jersey-test-framework-core</artifactId>
 			<scope>test</scope>
-			<version>${jersye.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.test-framework.providers</groupId>
 			<artifactId>jersey-test-framework-provider-grizzly2</artifactId>
-			<version>${jersye.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

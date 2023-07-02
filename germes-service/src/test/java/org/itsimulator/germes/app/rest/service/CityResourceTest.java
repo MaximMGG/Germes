@@ -5,11 +5,11 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import javax.ws.rs.core.Application;
-
 import org.glassfish.jersey.test.JerseyTest;
 import org.itsimulator.germes.app.rest.service.config.JerseyConfig;
 import org.junit.Test;
+
+import jakarta.ws.rs.core.Application;
 
 /**
  * {@link CityResourceTest} is integration test that verifies
