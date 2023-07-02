@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+	  <groupId>edu.test-project-germes</groupId>
+	  <artifactId>MyGermes</artifactId>
+	  <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>germes-presentation</artifactId>
+  <packaging>war</packaging>
+  
+  <dependencies>
+	  <dependency>
+		  <groupId>edu.test-project-germes</groupId>
+		  <artifactId>germes-service</artifactId>
+		  <version>${project.parent.version}</version>
+	  </dependency>
+  </dependencies>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>19</release>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat</artifactId>
+				<version>10.1.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.3.1.v20150714</version>
+			</plugin>
+		</plugins>
+  </build>
+</project>

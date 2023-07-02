@@ -6,6 +6,7 @@ org\itsimulator\germes\app\infra\exception\PersistenceException.class
 org\itsimulator\germes\app\model\entity\transport\TransportType.class
 org\itsimulator\germes\app\infra\exception\ConfigurationException.class
 org\itsimulator\germes\app\infra\exception\FlowException.class
+org\itsimulator\germes\app\infra\util\ReflectionUtil.class
 org\itsimulator\germes\app\infra\util\CommonUtil.class
 org\itsimulator\germes\app\model\search\range\RangeCriteria.class
 org\itsimulator\germes\app\model\entity\base\AbstractEntity.class

@@ -6,6 +6,7 @@ C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsi
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\model\entity\base\AbstractEntity.java
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\infra\exception\CommunicationException.java
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\infra\exception\FlowException.java
+C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\infra\util\ReflectionUtil.java
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\model\entity\geography\City.java
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\model\search\criteria\StationCriteria.java
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\infra\exception\ConfigurationException.java
