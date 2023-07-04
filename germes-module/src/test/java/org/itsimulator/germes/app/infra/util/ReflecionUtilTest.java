@@ -1,6 +1,7 @@
 package org.itsimulator.germes.app.infra.util;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -9,6 +10,7 @@ import java.util.List;
 
 import org.itsimulator.germes.app.infra.exception.ConfigurationException;
 import org.itsimulator.germes.app.infra.exception.flow.InvalidParameterException;
+import org.itsimulator.germes.app.infra.util.annotation.Ignore;
 import org.junit.Test;
 
 /**
@@ -48,6 +50,26 @@ public class ReflecionUtilTest {
 		ReflectionUtil.copyFields(src, dest, fields);
 		assertEquals(dest.getValue(), 10);
 	}
+	@Test
+	public void copyFindSimilarFieldsWithIgnoreSuccess() {
+		List<String> fields = ReflectionUtil.findSimilarFields(Source.class, Destination.class);
+		assertFalse(fields.contains("ignored"));
+	}
+	
+	@Test
+	public void copyFindSimilarForStaticAndFinalSuccess() {
+		List<String> fields = ReflectionUtil.findSimilarFields(Source.class, Destination.class);
+		assertFalse(fields.contains("staticField"));
+		assertFalse(fields.contains("finalField"));
+	}
+	
+	@Test
+	public void copyFindSimilarFieldsForBaseFieldSuccess() {
+		List<String> fields = ReflectionUtil.findSimilarFields(Source.class, Destination.class);
+		assertTrue(fields.contains("baseField"));
+	}
+	
+	
 	@Test(expected=InvalidParameterException.class)
 	public void copyFieldsDestinationNullFailure() {
 		Source src = new Source();
@@ -55,25 +77,47 @@ public class ReflecionUtilTest {
 	}
 }
 
-class Destination {
-	private int value;
-	
-	public int getValue() {
-		return value;
-	}
-	
+class BaseSource {
+	private int baseField;
 }
 
-class Source {
+class BaseDestination {
+	private int baseField;
+}
+
+
+
+class Source extends BaseSource {
 	private int value;
 	
 	private String test;
+	
+	@Ignore
+	private int ignored = 2;
+	
+	private static int staticField;
+	
+	private final int finalField = 0;
 	
 	public void setValue(int value) {
 		this.value = value;
 	}
 }
 
+class Destination extends BaseDestination {
+	private int value;
+	
+	private int ignored;
+	
+	private int staticField;
+	
+	private final int finalField = 0;
+	
+	public int getValue() {
+		return value;
+	}
+	
+}
 class Restricted {
 	public Restricted(int value) {
 		

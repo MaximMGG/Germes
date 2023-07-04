@@ -6,9 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.List;
 import java.util.Map;
 
+import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.itsimulator.germes.app.rest.dto.CityDTO;
-import org.itsimulator.germes.app.rest.service.config.JerseyConfig;
 import org.junit.Test;
 
 import jakarta.ws.rs.client.Entity;
@@ -26,9 +26,10 @@ public class CityResourceTest extends JerseyTest {
 	
 	@Override
 	protected Application configure() {
-		return new JerseyConfig();
+		return new ResourceConfig(CityResource.class);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Test
 	public void testFindCitiesSuccess() {
 		List<Map<String, String>> cities = target("cities").request().get(List.class);
@@ -57,7 +58,8 @@ public class CityResourceTest extends JerseyTest {
 	public void testFindCityByIdInvalidId() {
 		Response response = target("cities/aaab").request().get(Response.class);
 		assertNotNull(response);
-		assertEquals(response.getStatus(), Response.Status.NO_CONTENT.getStatusCode());
+		assertEquals(response.getStatus(), Response.Status.NOT_FOUND.getStatusCode());
+		
 	}
 	@Test
 	public void testSaveCitySuccess() {
