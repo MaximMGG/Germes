@@ -1,8 +1,0 @@
-org\itsimulator\germes\app\service\transform\impl\SimpleDTOTransformer.class
-org\itsimulator\germes\app\rest\dto\base\BaseDTO.class
-org\itsimulator\germes\app\rest\dto\CityDTO.class
-org\itsimulator\germes\app\rest\service\CityResource.class
-org\itsimulator\germes\app\service\GeographicService.class
-org\itsimulator\germes\app\rest\service\config\JerseyConfig.class
-org\itsimulator\germes\app\service\impl\GeographicServiceImpl.class
-org\itsimulator\germes\app\service\transform\Transformer.class
