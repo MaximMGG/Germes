@@ -10,7 +10,7 @@
   </parent>
   
   <artifactId>germes-presentation</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   
   <dependencies>
 	  <dependency>
