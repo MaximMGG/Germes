@@ -13,6 +13,7 @@ import jakarta.ws.rs.ApplicationPath;
 
 public class JerseyConfig extends ResourceConfig {
 	public JerseyConfig() {
-		packages("org.itsimulator.germes.app.rest.service");
+//		packages("org.itsimulator.germes.app.rest.service");
+		super(JerseyConfig.class);
 	}
 }
