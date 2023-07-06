@@ -58,7 +58,7 @@ public class CityResourceTest extends JerseyTest {
 	public void testFindCityByIdInvalidId() {
 		Response response = target("cities/aaab").request().get(Response.class);
 		assertNotNull(response);
-		assertEquals(response.getStatus(), Response.Status.NOT_FOUND.getStatusCode());
+		assertEquals(response.getStatus(), Response.Status.BAD_REQUEST.getStatusCode());
 		
 	}
 	@Test
