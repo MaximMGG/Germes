@@ -1,6 +1,7 @@
 package org.itsimulator.germes.app.rest.service.config;
 
 import org.glassfish.jersey.server.ResourceConfig;
+import org.itsimulator.germes.app.config.ComponentFeature;
 
 import jakarta.ws.rs.ApplicationPath;
 
@@ -13,7 +14,7 @@ import jakarta.ws.rs.ApplicationPath;
 
 public class JerseyConfig extends ResourceConfig {
 	public JerseyConfig() {
-//		packages("org.itsimulator.germes.app.rest.service");
-		super(JerseyConfig.class);
+		super(ComponentFeature.class);
+		packages("org.itsimulator.germes.app.rest");
 	}
 }

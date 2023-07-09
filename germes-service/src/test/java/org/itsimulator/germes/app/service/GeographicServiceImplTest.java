@@ -14,6 +14,7 @@ import org.itsimulator.germes.app.model.entity.transport.TransportType;
 import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
 import org.itsimulator.germes.app.model.search.range.RangeCriteria;
 import org.itsimulator.germes.app.service.impl.GeographicServiceImpl;
+import org.itsimulator.germes.persistance.repository.inmemory.InMemoryCityRepository;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,7 +26,7 @@ public class GeographicServiceImplTest {
 	
 	@Before
 	public void setup() {
-		service = new GeographicServiceImpl();
+		service = new GeographicServiceImpl(new InMemoryCityRepository());
 	}
 
 	@Test
