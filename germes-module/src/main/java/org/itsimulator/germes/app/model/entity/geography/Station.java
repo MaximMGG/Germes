@@ -2,6 +2,14 @@ package org.itsimulator.germes.app.model.entity.geography;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 import org.apache.tomcat.jakartaee.commons.lang3.StringUtils;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
@@ -13,6 +21,10 @@ import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
  * @author Maxim
  *
  */
+
+
+@Table(name = "STATION")
+@Entity
 public class Station extends AbstractEntity {
 	private City city;
 	
@@ -38,10 +50,13 @@ public class Station extends AbstractEntity {
 		this.transportType = Objects.requireNonNull(transportType);
 	}
 
+	@ManyToOne(cascade = {}, fetch = FetchType.EAGER)
+	@JoinColumn(name = "CITY_ID")
 	public City getCity() {
 		return city;
 	}
 
+	@Embedded
 	public Address getAddress() {
 		return address;
 	}
@@ -50,6 +65,7 @@ public class Station extends AbstractEntity {
 		this.address = address;
 	}
 
+	@Column(name = "PHONE", length = 16)
 	public String getPhone() {
 		return phone;
 	}
@@ -58,6 +74,7 @@ public class Station extends AbstractEntity {
 		this.phone = phone;
 	}
 
+	@Embedded
 	public Coordinate getCoordinate() {
 		return coordinate;
 	}

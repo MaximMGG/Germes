@@ -4,6 +4,13 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
 import org.itsimulator.germes.app.infra.util.CommonUtil;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
@@ -13,6 +20,9 @@ import org.itsimulator.germes.app.model.entity.transport.TransportType;
  *
  */
 
+
+@Table(name = "CITY")
+@Entity
 public class City extends AbstractEntity {	
 	private String name;
 	
@@ -39,6 +49,7 @@ public class City extends AbstractEntity {
 		this.name = name;
 	}
 
+	@Column(name = "NAME", nullable = false, length = 32)
 	public String getName() {
 		return name;
 	}
@@ -47,6 +58,7 @@ public class City extends AbstractEntity {
 		this.name = name;
 	}
 
+	@Column(name = "DISTRINCT", nullable = false, length = 32)
 	public String getDistrict() {
 		return district;
 	}
@@ -55,6 +67,7 @@ public class City extends AbstractEntity {
 		this.district = district;
 	}
 
+	@Column(name = "REGION", nullable = false, length = 32, unique = true)
 	public String getRegion() {
 		return region;
 	}
@@ -63,6 +76,7 @@ public class City extends AbstractEntity {
 		this.region = region;
 	}
 
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "city", orphanRemoval = true)
 	public Set<Station> getStations() {		
 		return CommonUtil.getSafeSet(stations);
 	}

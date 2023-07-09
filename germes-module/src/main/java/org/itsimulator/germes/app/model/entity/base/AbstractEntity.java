@@ -2,6 +2,15 @@ package org.itsimulator.germes.app.model.entity.base;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToOne;
+
 import org.itsimulator.germes.app.model.entity.person.Account;
 /**
  * Base class for all business entities
@@ -9,6 +18,8 @@ import org.itsimulator.germes.app.model.entity.person.Account;
  *
  */
 
+
+@MappedSuperclass
 public abstract class AbstractEntity {
 	/**
 	 * Unique entity identifier
@@ -34,7 +45,11 @@ public abstract class AbstractEntity {
 	 * Last person who modified entity 
 	 */
 	private Account modifiedBy;
-
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID")
 	public int getId() {
 		return id;
 	}
@@ -43,6 +58,7 @@ public abstract class AbstractEntity {
 		this.id = id;
 	}
 
+	@Column(name = "CREATED_AT", nullable = false, updatable = false)
 	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
@@ -51,6 +67,7 @@ public abstract class AbstractEntity {
 		this.createdAt = createdAt;
 	}
 
+	@Column(name = "MODIFIED_AT", insertable = false)
 	public LocalDateTime getModifiedAt() {
 		return modifiedAt;
 	}
@@ -59,6 +76,8 @@ public abstract class AbstractEntity {
 		this.modifiedAt = modifiedAt;
 	}
 
+	@OneToOne(fetch = FetchType.LAZY, cascade = {})
+	@JoinColumn(name = "CREATED_BY", updatable = false)
 	public Account getCreatedBy() {
 		return createdBy;
 	}
@@ -67,6 +86,8 @@ public abstract class AbstractEntity {
 		this.createdBy = createdBy;
 	}
 
+	@OneToOne(fetch = FetchType.LAZY, cascade = {})
+	@JoinColumn(name = "MODIFIED_BY", insertable = false)
 	public Account getModifiedBy() {
 		return modifiedBy;
 	}

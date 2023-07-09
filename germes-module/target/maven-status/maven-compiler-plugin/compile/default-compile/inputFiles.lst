@@ -12,6 +12,7 @@ C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsi
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\infra\exception\ConfigurationException.java
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\model\entity\person\Account.java
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\infra\exception\flow\InvalidParameterException.java
+C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\infra\util\annotation\Ignore.java
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\model\entity\transport\TransportType.java
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\infra\exception\base\AppException.java
 C:\Users\123\Desktop\JAVA projects\MyGermes\germes-module\src\main\java\org\itsimulator\germes\app\model\entity\geography\Coordinate.java
